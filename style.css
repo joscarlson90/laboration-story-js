@@ -1,0 +1,87 @@
+:root {
+    --mainFont: "Manrope", sans-serif;
+    --mainTextColor: antiquewhite;
+}
+
+body {
+    margin: 0;
+    background-image: url(assets/drink\ homepage.jpg);
+    background-size: cover;
+    color: var(--mainTextColor);
+    font-family: var(--mainFont);
+}
+
+header {
+  font-family: "Asset", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  background-color: tomato;
+  padding: 15px;
+  text-align: center;
+}
+h1 {
+    font-size: 34px;
+}
+
+#startButton {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    border-style: none;
+    border: none;
+    background-color: transparent;
+    font-family: var(--mainFont);
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--mainTextColor);
+}
+
+#startButton:hover {
+    cursor: pointer;
+    color: tomato;
+    font-size: larger;
+}
+
+#game {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+#content button {
+    display: flex;
+    justify-content: center;
+}
+
+#content p {
+    display: flex;
+    justify-content: center;
+    font-size: 28px;
+    font-family: var(--mainFont);
+    font-weight: 400;
+    color: chocolate;
+}
+
+#content button {
+    width: 200px;
+    margin-top: 7px;
+    font-size: 18px;
+    font-family: var(--mainFont);
+    border-style: none;
+    border-radius: 12px;
+    padding: 6px;
+    color: chocolate;
+    background-color: white;
+    cursor: pointer;
+}
+
+#content button:hover {
+    background: chocolate;
+    color: white;
+}
+
+#content h3 {
+    color: chocolate;
+    font-size: 28px;
+    border-bottom: 1px solid white;
+}
