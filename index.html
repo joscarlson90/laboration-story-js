@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Drinkmixer</title>
 
-    <script defer src="script.js"></script>
+    <script defer src="choiceRoom.js"></script>
+    <script defer src="choiceGlas.js"></script>
+    <script defer src="choiceBase.js"></script>
+    <script defer src="choiceMix.js"></script>
     <link rel="stylesheet" href="style.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -20,13 +23,23 @@
       <h1>Mixa Din Drink</h1>
     </header>
 
-    <div id="game">
-      <div id="content">
+    <div class="game">
+      <div class="content">
         <p class="welcomeText">
           Det är fredag! Klockan är slagen och det är dags för en drink!
         </p>
-        <button id="startButton">Börja mixa</button>
+        <button class="startButton">Börja mixa</button>
       </div>
     </div>
+
+    <div id="shakerMove" style="display: none">
+      <img
+        id="shakerImage"
+        src="assets/Shaker-silver 1.png"
+        alt="Drink Shaker">
+    </div>
+
+    <audio id="shakerSound" src="sounds/shaker.mp3" preload="auto"></audio>
+
   </body>
 </html>
