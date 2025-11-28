@@ -8,3 +8,5 @@ Därefter är det dags att göra dina dryckesval. Beroende på val, byts musik t
 Snart har du din drink färdig och redo att avnjutas på platsen du har valt!
 
 **Enjoy!**
+
+https://github.com/joscarlson90/laboration-story-js
