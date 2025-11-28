@@ -6,7 +6,7 @@ function openMix(content) {
   title.textContent = "Dags för blanddryck! Vad väljer du?";
   content.appendChild(title);
 
-  const mixList = ["Tonic", "Limejuice", "Fanta Lemon", "Coca Cola"];
+  const mixList = ["Tonic", "Sodavatten", "Fanta Lemon", "Tranbärsjuice"];
 
   for (const mix of mixList) {
     const btn = document.createElement("button");
@@ -20,16 +20,6 @@ function openMix(content) {
 
 function selectedMix(mix, content) {
   yourDrink.mix = mix;
-
-  const p = document.createElement("p");
-  const resultat = "Blanddryck: " + mix + " 🧃";
-
-  p.textContent = resultat;
-  p.style.margin = "0";
-  p.style.fontSize = "24px";
-  p.style.textAlign = "center";
-
-  document.body.appendChild(p);
 
   shakeDrink(content);
 }
@@ -52,30 +42,59 @@ function shakeDrink(content) {
     shakerImage.classList.remove("shake");
     shakerMove.style.display = "none";
     shakerSound.pause();
-    finalDrink(content);
+
+    const comment = showRandomComment();
+    finalDrink(content, comment);
   }, 2000);
 }
 
+// Slumpmässig kommentar
+const comments = [
+  "Wow! Bra val!",
+  "Hm.. Intressant kombo",
+  "Fräscht! Perfekt för vilken dag som helst",
+  "Den där slinker ner fort!",
+  "Jasså du, spännande val!",
+  "Ajdå, får se hur den smakar.."
+];
+
+function showRandomComment() {
+  const randomNumber = Math.floor(Math.random() * comments.length);
+  return comments[randomNumber];
+}
+
 // SLUTRESULTAT
-function finalDrink(content) {
+function finalDrink(content, comment) {
   clearContent(content);
 
   const title = document.createElement("h3");
   title.textContent = "Slurk.. Din drink är klar!";
   title.classList.add("finalTitle");
-
   content.append(title);
+  document.querySelector(".randomComment").style.display = "block";
+  
 
-  const resultTextBox = document.createElement("div"); //nej
-  resultTextBox.classList.add("finalTextBox"); // texten kvar, rutan försvann
-  content.appendChild(resultTextBox);
+  const resultTextBox = document.createElement("div");
+  resultTextBox.classList.add("finalTextBox");
+  content.append(resultTextBox);
 
+  document.querySelector(".randomComment").textContent = comment;
+
+  
   for (const [key, value] of Object.entries(yourDrink)) {
     const p = document.createElement("p");
 
     p.textContent = `${value}`;
     p.classList.add("finalItem");
 
-    resultTextBox.appendChild(p);
+    resultTextBox.append(p);
   }
 }
+
+// function restart(content) {
+//   clearContent(content);
+
+//   const btn = document.createElement("button");
+//   btn.textContent = "Mixa en till drink";
+//   content.appendChild("btn");
+// }

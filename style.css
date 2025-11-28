@@ -1,5 +1,6 @@
 :root {
   --mainFont: "Manrope", sans-serif;
+  --headerFont: "Galindo", sans-serif;
   --mainTextColor: white;
   --hoverTextColor: tomato;
   --color: #2f4f4f;
@@ -11,7 +12,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   color: var(--mainTextColor);
-  font-family: var(--mainFont);
+  font-family: var(--headerFont);
 }
 
 header {
@@ -40,7 +41,6 @@ h1 {
   border-style: none;
   border: none;
   background-color: transparent;
-  font-family: var(--mainFont);
   font-size: 24px;
   color: var(--mainTextColor);
 }
@@ -55,8 +55,7 @@ h1 {
   display: flex;
   justify-content: center;
   font-size: 32px;
-  font-family: var(--mainFont);
-  font-weight: 400;
+  font-weight: 300;
   color: var(--hoverTextColor);
 }
 
@@ -64,9 +63,9 @@ h1 {
   width: 200px;
   margin-top: 7px;
   font-size: 18px;
-  font-family: var(--mainFont);
+  font-family: var(--headerFont);
   border-style: none;
-  border-radius: 12px;
+  border-radius: 16px;
   padding: 6px;
   color: var(--hoverTextColor);
   background-color: white;
@@ -90,48 +89,21 @@ h1 {
 .finalTitle {
   color: white;
   font-size: 24px;
-  margin-bottom: 15px;
+  margin: 60px 0 15px 0;
 }
 
 .finalTextBox {
   background: rgba(255, 255, 255, 0.745);
   padding: 15px 20px;
   border-radius: 16px;
+  margin-bottom: 15px;
 }
 
 .finalItem {
-  font-weight: bold;
   font-size: 18px;
   color: tomato;
   margin: 8px 0;
   text-align: center;
-}
-
-.choiceCard {
-  width: 300px;
-  padding: 20px;
-  background: var(--color);
-  border-radius: 16px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-}
-
-.choiceCard h2 {
-  margin-bottom: 15px;
-  font-size: 22px;
-}
-
-.category {
-  margin-bottom: 10px;
-  font-size: 17px;
-}
-
-body {
-  margin: 0;
-  background-image: url(assets/drink\ homepage.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: var(--mainTextColor);
-  font-family: var(--mainFont);
 }
 
 button {
@@ -159,23 +131,10 @@ button:hover {
   background: transparent;
   transition: transform 0.2s;
 }
+
 .glassButton:hover {
   transform: scale(1.1);
   background-color: transparent;
-}
-
-.selected {
-  background: tomato;
-  color: white;
-}
-
-.drinkResult {
-  background: white;
-  border: 2px solid #bc8f8f;
-  padding: 20px;
-  border-radius: 16px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
-  margin-top: 32px;
 }
 
 #shakerMove {
@@ -189,7 +148,7 @@ button:hover {
 }
 
 #shakerImage {
-  width: 400px;
+  width: 500px;
   transform-origin: 50% 20%;
 }
 
@@ -216,4 +175,18 @@ button:hover {
   100% {
     transform: rotate(0deg);
   }
+}
+
+.randomComment {
+  display: none;
+  text-align: center;
+  width: fit-content;
+  font-size: 20px;
+  font-style: italic;
+  margin: 0 auto;
+  padding: 10px 15px;
+  border-radius: 16px;
+  color: white;
+  background-color: #ffbf47;
+  animation: randComment 1 infinite;
 }

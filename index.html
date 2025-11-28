@@ -17,6 +17,12 @@
       href="https://fonts.googleapis.com/css2?family=Asset&family=Manrope:wght@200..800&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Galindo&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>
@@ -26,20 +32,20 @@
     <div class="game">
       <div class="content">
         <p class="welcomeText">
-          Det är fredag! Klockan är slagen och det är dags för en drink!
+          Det är fredag - Klockan är slagen och det är dags för en drink!
         </p>
         <button class="startButton">Börja mixa</button>
       </div>
+
+      <div id="shakerMove" style="display: none">
+        <img
+          id="shakerImage"
+          src="assets/Shaker-silver 1.png"
+          alt="Drink Shaker"
+        />
+      </div>
+      <audio id="shakerSound" src="sounds/shaker.mp3" preload="auto"></audio>
     </div>
-
-    <div id="shakerMove" style="display: none">
-      <img
-        id="shakerImage"
-        src="assets/Shaker-silver 1.png"
-        alt="Drink Shaker">
-    </div>
-
-    <audio id="shakerSound" src="sounds/shaker.mp3" preload="auto"></audio>
-
+    <div class="randomComment" style="display: none"></div>
   </body>
 </html>

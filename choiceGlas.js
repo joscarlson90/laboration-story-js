@@ -1,7 +1,7 @@
 // VÄLJA GLAS
 const glassList = [
   {name: "Highball", img: "assets/highballglass.webp"},
-  {name: "Lowball", img: "assets/lowballglass.webp"},
+  {name: "Lowball", img: "assets/lowballglass.webp.jpg"},
   {name: "Margaritaglas", img: "assets/margaritaglas.jpg"},
   {name: "Cocktailglas", img: "assets/cocktailglas.jpg"}
 ];
@@ -32,26 +32,8 @@ function openGlass(content) {
   })
 }
 
-  // for (const glass of glassList) {
-  //   const btn = document.createElement("button");
-  //   btn.textContent = glass;
-
-  //   btn.addEventListener("click", () => selectedGlass(glass, content));
-  //   content.appendChild(btn);
-  //   btn.classList.add("startButton");
-
 function selectedGlass(glass, content) {
   yourDrink.glass = glass;
-
-  // const p = document.createElement("p");
-  // const resultat = "Glas: " + glass + " 🥃";
-
-  // p.textContent = resultat;
-  // p.style.margin = "0";
-  // p.style.fontSize = "24px";
-  // p.style.textAlign = "center";
- 
-  // document.body.appendChild(p);
 
   openBase(content);
 }

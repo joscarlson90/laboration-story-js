@@ -21,15 +21,5 @@ function openBase(content) {
 function selectedBase(base, content) {
   yourDrink.base = base;
 
-  // const p = document.createElement("p");
-  // const resultat = "Bas: " + base + " 🍸";
-
-  // p.textContent = resultat;
-  // p.style.margin = "0";
-  // p.style.fontSize = "24px";
-  // p.style.textAlign = "center";
-
-  // document.body.appendChild(p);
-
   openMix(content);
 }

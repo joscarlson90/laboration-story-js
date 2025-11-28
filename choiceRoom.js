@@ -39,21 +39,33 @@ function openPlace(content) {
 
 function selectedRoom(room, content) {
   let imgChange = "";
+  const dinnerSound = new Audio("sounds/dinnersound.mp3");
+  const barSound = new Audio("sounds/barsound.mp3");
+  const beachSound = new Audio("sounds/oceanwave.mp3");
+  const cafeSound = new Audio("sounds/cafesound.mp3");
 
   yourDrink.place = room;
 
   switch (room) {
     case "Hemma":
-      imgChange = "url('assets/home.webp')";
+      imgChange = "url('assets/home.jpeg')";
+      dinnerSound.volume = 0.3;
+      dinnerSound.play();
       break;
     case "Bar":
-      imgChange = "url('assets/bar.webp')";
+      imgChange = "url('assets/bar.jpeg')";
+      barSound.volume = 0.3;
+      barSound.play();
       break;
     case "Strand":
       imgChange = "url('assets/beach.jpg')";
+      beachSound.volume = 0.3;
+      beachSound.play();
       break;
     case "Café":
       imgChange = "url('assets/café.webp')";
+      cafeSound.volume = 0.3;
+      cafeSound.play();
       break;
   }
 
@@ -64,18 +76,5 @@ function selectedRoom(room, content) {
   document.body.style.backgroundPosition = "center";
   document.body.style.backgroundRepeat = "no-repeat";
 
-  // const resultat = "Plats: " + room + " 📍";
-  // const p = document.createElement("p");
-
-  // p.textContent = resultat;
-  // p.style.margin = "0";
-  // p.style.paddingTop = "10px";
-  // p.style.fontSize = "24px";
-  // p.style.textAlign = "center";
-
-  // document.body.appendChild(p);
-
   openGlass(content);
 }
-
-
