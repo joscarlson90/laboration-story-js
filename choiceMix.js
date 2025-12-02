@@ -73,14 +73,16 @@ function finalDrink(content, comment) {
   title.textContent = "Slurk.. Din drink är klar!";
   title.classList.add("finalTitle");
   content.append(title);
-  document.createElement(".randomComment").style.display = "block";
+  document.querySelector(".randomComment").style.display = "block";
 
   const resultTextBox = document.createElement("div");
   resultTextBox.classList.add("finalTextBox");
   content.append(resultTextBox);
-  document.querySelector(".randomComment").textContent = comment;
 
-  // document.querySelector(".restartBtn").style.display = "inline-block";
+  const randomComment = document.createElement("div");
+  randomComment.classList.add("randomComment");
+  document.body.append(randomComment);
+  randomComment.textContent = comment;
 
   for (const [key, value] of Object.entries(yourDrink)) {
     const p = document.createElement("p");
@@ -89,14 +91,15 @@ function finalDrink(content, comment) {
     p.classList.add("finalItem");
 
     resultTextBox.append(p);
-
   }
   // restartGame();
 }
 
 // function restartGame() {
-// const restartBtn = document.querySelector(".restartBtn");
-//   restartBtn.addEventListener("click", main)
+//   clearContent();
+//   const restartBtn = document.createElement("button");
+//   restartBtn.classList.add("restartBtn");
+//   document.body.append(restartBtn);
+//   restartBtn.textContent = "Mixa igen";
 // }
-// main();
 

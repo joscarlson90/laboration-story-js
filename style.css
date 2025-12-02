@@ -172,7 +172,6 @@ button:hover {
 }
 
 .randomComment {
-  display: none;
   font-family: "Courier New", Courier, monospace;
   text-align: center;
   width: fit-content;
