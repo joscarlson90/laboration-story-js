@@ -1,15 +1,28 @@
 window.addEventListener("DOMContentLoaded", main);
 
 function main() {
-  
-  const welcomeText = document.querySelector(".welcomeText");
-  const btn = document.querySelector(".startButton");
-  const content = document.querySelector(".content");
-  
-  welcomeText.textContent = "Det är fredag - Klockan är slagen och det är dags för en drink!"
 
+  const welcomeText = document.createElement("p");
+  const btn = document.createElement("button");
+  const content = document.createElement("div");
+
+  welcomeText.classList.add("welcomeText");
+  btn.classList.add("startButton");
+  content.classList.add("content");
+
+  welcomeText.textContent =
+    "Det är fredag - Klockan är slagen och det är dags för en drink!";
   btn.textContent = "Börja mixa";
-  btn.addEventListener("click", () => openPlace(content));
+
+  btn.addEventListener("click", () => {
+    openPlace(content);
+    btn.style.display = "none";
+    welcomeText.style.display = "none";
+  });
+ 
+  document.body.appendChild(welcomeText);
+  document.body.appendChild(btn);
+  document.body.appendChild(content);
 }
 
 const yourDrink = {
@@ -31,13 +44,12 @@ function openPlace(content) {
   const roomList = ["Hemma", "Bar", "Strand", "Café"];
   title.textContent = "Vart vill du dricka din drink?";
   content.append(title);
-  
+
   for (const room of roomList) {
     const btn = document.createElement("button");
     btn.textContent = room;
     btn.addEventListener("click", () => selectedRoom(room, content));
     content.appendChild(btn);
-  
     btn.classList.add("startButton");
   }
 }

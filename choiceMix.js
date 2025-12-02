@@ -73,7 +73,7 @@ function finalDrink(content, comment) {
   title.textContent = "Slurk.. Din drink är klar!";
   title.classList.add("finalTitle");
   content.append(title);
-  document.querySelector(".randomComment").style.display = "block";
+  document.createElement(".randomComment").style.display = "block";
 
   const resultTextBox = document.createElement("div");
   resultTextBox.classList.add("finalTextBox");
@@ -91,12 +91,12 @@ function finalDrink(content, comment) {
     resultTextBox.append(p);
 
   }
-  restartGame();
+  // restartGame();
 }
 
-function restartGame() {
-const restartBtn = document.querySelector(".restartBtn");
-  restartBtn.addEventListener("click", main)
-}
-main();
+// function restartGame() {
+// const restartBtn = document.querySelector(".restartBtn");
+//   restartBtn.addEventListener("click", main)
+// }
+// main();
 

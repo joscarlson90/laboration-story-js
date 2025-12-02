@@ -33,11 +33,11 @@ h1 {
   text-align: center;
 }
 
-.content .startButton {
+.startButton {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 7px auto;
+  margin: 5px auto;
   text-align: center;
   border: none;
   font-size: 18px;
@@ -58,7 +58,7 @@ h1 {
   background: #ff826b;
 }
 
-.content .welcomeText {
+.welcomeText {
   text-align: center;
   font-size: 32px;
   font-weight: 300;
@@ -85,7 +85,7 @@ h1 {
 
 .finalTextBox {
   display: inline-block;
-  background: rgba(255, 255, 255, 0.745);
+  background: white;
   padding: 15px;
   width: 200px;
   border-radius: 16px;
