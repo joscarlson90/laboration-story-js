@@ -1,10 +1,15 @@
 window.addEventListener("DOMContentLoaded", main);
 
 function main() {
-  const content = document.querySelector(".content");
+  
+  const welcomeText = document.querySelector(".welcomeText");
   const btn = document.querySelector(".startButton");
-  btn.addEventListener("click", () => openPlace(content));
+  const content = document.querySelector(".content");
+  
+  welcomeText.textContent = "Det är fredag - Klockan är slagen och det är dags för en drink!"
+
   btn.textContent = "Börja mixa";
+  btn.addEventListener("click", () => openPlace(content));
 }
 
 const yourDrink = {
@@ -26,13 +31,13 @@ function openPlace(content) {
   const roomList = ["Hemma", "Bar", "Strand", "Café"];
   title.textContent = "Vart vill du dricka din drink?";
   content.append(title);
-
+  
   for (const room of roomList) {
     const btn = document.createElement("button");
     btn.textContent = room;
     btn.addEventListener("click", () => selectedRoom(room, content));
     content.appendChild(btn);
-
+  
     btn.classList.add("startButton");
   }
 }

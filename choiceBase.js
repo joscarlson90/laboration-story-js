@@ -3,8 +3,7 @@ function openBase(content) {
   clearContent(content);
 
   const title = document.createElement("h3");
-  title.textContent =
-    "Välj alkoholbas:";
+  title.textContent = "Välj alkoholbas:";
   content.appendChild(title);
 
   const baseList = ["Gin", "Vodka", "Rom", "Tequila"];

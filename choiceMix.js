@@ -13,7 +13,6 @@ function openMix(content) {
     btn.textContent = mix;
     btn.addEventListener("click", () => selectedMix(mix, content));
     content.appendChild(btn);
-
     btn.classList.add("startButton");
   }
 }
@@ -25,22 +24,25 @@ function selectedMix(mix, content) {
 }
 
 function shakeDrink(content) {
-  const shakerMove = document.getElementById("shakerMove");
-  const shakerImage = document.getElementById("shakerImage");
-  const shakerSound = document.getElementById("shakerSound");
+  const shakerMove = document.createElement("div");
+  const shakerImage = document.createElement("img");
+  const shakerSound = document.createElement("audio");
+
+  shakerMove.classList.add("shakerMove");
+  shakerImage.classList.add("shakerImage");
+  shakerImage.src = "assets/Shaker-silver 1.png";
+  shakerSound.src = "sounds/shaker.mp3";
+
+  shakerSound.play();
 
   shakerMove.style.display = "flex";
-
-  shakerImage.classList.remove("shake");
-  void shakerImage.offsetWidth;
   shakerImage.classList.add("shake");
-
-  shakerSound.currentTime = 0;
-  const play = shakerSound.play().catch(() => console.log("Kunde ej"));
+  shakerMove.append(shakerImage);
+  content.append(shakerMove);
 
   setTimeout(() => {
-    shakerImage.classList.remove("shake");
     shakerMove.style.display = "none";
+    shakerImage.classList.remove("shake");
     shakerSound.pause();
 
     const comment = showRandomComment();
@@ -55,7 +57,7 @@ const comments = [
   "Fräscht! Perfekt för vilken dag som helst",
   "Den där slinker ner fort!",
   "Jasså du, spännande val!",
-  "Ajdå, får se hur den smakar.."
+  "Ajdå, får se hur den smakar..",
 ];
 
 function showRandomComment() {
@@ -72,15 +74,14 @@ function finalDrink(content, comment) {
   title.classList.add("finalTitle");
   content.append(title);
   document.querySelector(".randomComment").style.display = "block";
-  
 
   const resultTextBox = document.createElement("div");
   resultTextBox.classList.add("finalTextBox");
   content.append(resultTextBox);
-
   document.querySelector(".randomComment").textContent = comment;
 
-  
+  // document.querySelector(".restartBtn").style.display = "inline-block";
+
   for (const [key, value] of Object.entries(yourDrink)) {
     const p = document.createElement("p");
 
@@ -88,13 +89,14 @@ function finalDrink(content, comment) {
     p.classList.add("finalItem");
 
     resultTextBox.append(p);
+
   }
+  restartGame();
 }
 
-// function restart(content) {
-//   clearContent(content);
+function restartGame() {
+const restartBtn = document.querySelector(".restartBtn");
+  restartBtn.addEventListener("click", main)
+}
+main();
 
-//   const btn = document.createElement("button");
-//   btn.textContent = "Mixa en till drink";
-//   content.appendChild("btn");
-// }

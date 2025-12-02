@@ -1,7 +1,7 @@
 :root {
   --mainFont: "Manrope", sans-serif;
   --headerFont: "Galindo", sans-serif;
-  --mainTextColor: white;
+  --mainTextColor: #f0f0f0;
   --hoverTextColor: tomato;
   --color: #2f4f4f;
 }
@@ -28,86 +28,79 @@ h1 {
   font-size: 34px;
 }
 
-.game {
-  display: flex;
-  justify-content: center;
-  align-content: center;
+.content {
+  display: block;
+  text-align: center;
 }
 
 .content .startButton {
-  display: block;
-  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 7px auto;
   text-align: center;
-  border-style: none;
   border: none;
-  background-color: transparent;
-  font-size: 24px;
-  color: var(--mainTextColor);
+  font-size: 18px;
+  width: 200px;
+  margin-top: 7px;
+  font-family: var(--headerFont);
+  border-radius: 16px;
+  padding: 6px;
+  color: var(--hoverTextColor);
+  background-color: var(--mainTextColor);
+  cursor: pointer;
 }
 
 .startButton:hover {
   cursor: pointer;
-  color: tomato;
+  color: var(--mainTextColor);
   font-size: larger;
+  background: #ff826b;
 }
 
 .content .welcomeText {
-  display: flex;
-  justify-content: center;
+  text-align: center;
   font-size: 32px;
   font-weight: 300;
   color: var(--hoverTextColor);
 }
 
-.content .startButton {
-  width: 200px;
-  margin-top: 7px;
-  font-size: 18px;
-  font-family: var(--headerFont);
-  border-style: none;
-  border-radius: 16px;
-  padding: 6px;
-  color: var(--hoverTextColor);
-  background-color: white;
-  cursor: pointer;
-}
-
-.content .startButton:hover {
-  background: #ff826b;
-  color: white;
-}
-
 .content h3 {
   color: tomato;
+  text-align: center;
+  margin: 24px auto;
   font-size: 28px;
   font-weight: bold;
-  background-color: rgba(255, 255, 255, 0.745);
+  width: fit-content;
+  background-color: var(--mainTextColor);
   padding: 5px 10px;
   border-radius: 16px;
 }
 
 .finalTitle {
-  color: white;
+  color: var(--mainTextColor);
   font-size: 24px;
-  margin: 60px 0 15px 0;
+  margin: 60px 0 5px 0;
 }
 
 .finalTextBox {
+  display: inline-block;
   background: rgba(255, 255, 255, 0.745);
-  padding: 15px 20px;
+  padding: 15px;
+  width: 200px;
   border-radius: 16px;
-  margin-bottom: 15px;
 }
 
 .finalItem {
   font-size: 18px;
+  width: auto;
   color: tomato;
   margin: 8px 0;
   text-align: center;
 }
 
 button {
-  background: white;
+  background: var(--mainTextColor);
   border: 2px solid tomato;
   padding: 10px 14px;
   border-radius: 10px;
@@ -118,12 +111,7 @@ button {
 
 button:hover {
   background: #ff826b;
-  color: white;
-}
-
-.glassButton img {
-  width: 180px;
-  border-radius: 20px;
+  color: var(--mainTextColor);
 }
 
 .glassButton {
@@ -132,12 +120,18 @@ button:hover {
   transition: transform 0.2s;
 }
 
+
+.glassButton img {
+  width: 180px;
+  border-radius: 20px;
+}
+
 .glassButton:hover {
   transform: scale(1.1);
   background-color: transparent;
 }
 
-#shakerMove {
+.shakerMove {
   display: none;
   position: fixed;
   background: rgba(0, 0, 0, 0.4);
@@ -147,7 +141,7 @@ button:hover {
   margin: 20px auto;
 }
 
-#shakerImage {
+.shakerImage {
   width: 500px;
   transform-origin: 50% 20%;
 }
@@ -179,14 +173,24 @@ button:hover {
 
 .randomComment {
   display: none;
+  font-family: "Courier New", Courier, monospace;
   text-align: center;
   width: fit-content;
   font-size: 20px;
   font-style: italic;
-  margin: 0 auto;
-  padding: 10px 15px;
-  border-radius: 16px;
+  font-weight: bold;
+  margin: 5px auto;
+  padding: 5px 15px;
   color: white;
-  background-color: #ffbf47;
+  border-radius: 16px;
   animation: randComment 1 infinite;
+}
+
+.restartBtn {
+  display: none;
+  font-size: 18px;
+  font-family: var(--headerFont);
+  color: tomato;
+  margin: 100px 600px;
+  border-style: dashed;
 }
