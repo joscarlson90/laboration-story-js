@@ -15,12 +15,12 @@ function openGlass(content) {
 
   glassList.forEach(glass => {
     const btn = document.createElement("button");
-    btn.classList.add("glassButton");
-
     const img = document.createElement("img");
+
     img.src = glass.img;
     img.alt = glass.name;
 
+    btn.classList.add("glassButton");
     btn.appendChild(img);
 
     btn.addEventListener("click", () => {
@@ -34,6 +34,5 @@ function openGlass(content) {
 
 function selectedGlass(glass, content) {
   yourDrink.glass = glass;
-
   openBase(content);
 }

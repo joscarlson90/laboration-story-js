@@ -1,15 +1,35 @@
 window.addEventListener("DOMContentLoaded", main);
 
-function main() {
+const content = document.querySelector(".content");
 
+function clearContent(content) {
+  content.innerHTML = "";
+}
+
+function main() {
+  // const contentOld = document.querySelector(".content");
+  // if (contentOld) contentOld.remove();
+
+  // const headerOld = document.querySelector(".headerText");
+  // if (headerOld) headerOld.remove();
+
+  // const welcomeOld = document.querySelector(".welcomeText");
+  // if (welcomeOld) welcomeOld.remove();
+
+  // const btnOld = document.querySelector(".startButton");
+  // if (btnOld) btnOld.remove();
+
+  const headerText = document.createElement("h1");
   const welcomeText = document.createElement("p");
   const btn = document.createElement("button");
   const content = document.createElement("div");
 
+  headerText.classList.add("headerText");
   welcomeText.classList.add("welcomeText");
   btn.classList.add("startButton");
   content.classList.add("content");
 
+  headerText.textContent = "Mixa Din Drink";
   welcomeText.textContent =
     "Det är fredag - Klockan är slagen och det är dags för en drink!";
   btn.textContent = "Börja mixa";
@@ -19,10 +39,8 @@ function main() {
     btn.style.display = "none";
     welcomeText.style.display = "none";
   });
- 
-  document.body.appendChild(welcomeText);
-  document.body.appendChild(btn);
-  document.body.appendChild(content);
+
+  document.body.append(headerText, welcomeText, btn, content);
 }
 
 const yourDrink = {
@@ -31,10 +49,6 @@ const yourDrink = {
   base: null,
   mix: null,
 };
-
-function clearContent(container) {
-  container.innerHTML = " ";
-}
 
 // VÄLJA RUM
 function openPlace(content) {
@@ -49,8 +63,8 @@ function openPlace(content) {
     const btn = document.createElement("button");
     btn.textContent = room;
     btn.addEventListener("click", () => selectedRoom(room, content));
-    content.appendChild(btn);
     btn.classList.add("startButton");
+    content.appendChild(btn);
   }
 }
 

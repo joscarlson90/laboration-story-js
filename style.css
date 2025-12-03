@@ -1,51 +1,54 @@
 :root {
   --mainFont: "Manrope", sans-serif;
   --headerFont: "Galindo", sans-serif;
-  --mainTextColor: #f0f0f0;
+  --mainTextColor: white;
   --hoverTextColor: tomato;
-  --color: #2f4f4f;
 }
 
 body {
   margin: 0;
   background-image: url(assets/drink\ homepage.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
   color: var(--mainTextColor);
   font-family: var(--headerFont);
-}
-
-header {
-  font-family: "Asset", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
-  background-color: tomato;
-  padding: 15px;
-  text-align: center;
-}
-
-h1 {
-  font-size: 34px;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .content {
   display: block;
   text-align: center;
+  margin: auto;
+}
+
+.headerText {
+  font-family: "Asset", sans-serif;
+  font-style: normal;
+  background-color: tomato;
+  text-align: center;
+  font-size: 32px;
+  padding: 30px;
+  margin-top: 0;
+}
+
+.welcomeText {
+  margin: 0;
+  text-align: center;
+  font-size: 28px;
+  color: var(--hoverTextColor);
+
 }
 
 .startButton {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 5px auto;
+  margin: 30px auto;
   text-align: center;
-  border: none;
   font-size: 18px;
-  width: 200px;
-  margin-top: 7px;
+  width: 175px;
   font-family: var(--headerFont);
+  border: 2px solid rgba(0, 0, 0, 0);
   border-radius: 16px;
-  padding: 6px;
   color: var(--hoverTextColor);
   background-color: var(--mainTextColor);
   cursor: pointer;
@@ -54,21 +57,13 @@ h1 {
 .startButton:hover {
   cursor: pointer;
   color: var(--mainTextColor);
-  font-size: larger;
   background: #ff826b;
-}
-
-.welcomeText {
-  text-align: center;
-  font-size: 32px;
-  font-weight: 300;
-  color: var(--hoverTextColor);
 }
 
 .content h3 {
   color: tomato;
   text-align: center;
-  margin: 24px auto;
+  margin: 15px auto;
   font-size: 28px;
   font-weight: bold;
   width: fit-content;
@@ -84,7 +79,8 @@ h1 {
 }
 
 .finalTextBox {
-  display: inline-block;
+  display: block;
+  margin: auto;
   background: white;
   padding: 15px;
   width: 200px;
@@ -119,7 +115,6 @@ button:hover {
   background: transparent;
   transition: transform 0.2s;
 }
-
 
 .glassButton img {
   width: 180px;
@@ -172,24 +167,25 @@ button:hover {
 }
 
 .randomComment {
+  display: none;
   font-family: "Courier New", Courier, monospace;
   text-align: center;
-  width: fit-content;
+  max-width: fit-content;
   font-size: 20px;
   font-style: italic;
   font-weight: bold;
-  margin: 5px auto;
-  padding: 5px 15px;
-  color: white;
+  margin: auto;
+  padding: 5px;
   border-radius: 16px;
   animation: randComment 1 infinite;
 }
 
 .restartBtn {
-  display: none;
+  width: auto;
   font-size: 18px;
   font-family: var(--headerFont);
   color: tomato;
-  margin: 100px 600px;
   border-style: dashed;
+  background-color: white;
+  margin: 15px;
 }
