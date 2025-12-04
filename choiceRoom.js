@@ -6,6 +6,19 @@ function clearContent(content) {
   content.innerHTML = "";
 }
 
+function keepingDrink() {
+  localStorage.setItem("yourDrink", JSON.stringify(yourDrink));
+}
+
+function loadingDrink() {
+  const saved = localStorage.getItem("yourDrink");
+  if (saved) {
+    Object.assign(yourDrink, JSON.parse(saved));
+    return true;
+  }
+  return false;
+}
+
 function main() {
   const headerText = document.createElement("h1");
   const welcomeText = document.createElement("p");
@@ -18,8 +31,7 @@ function main() {
   content.classList.add("content");
 
   headerText.textContent = "Mixa Din Drink";
-  welcomeText.textContent =
-    "Det är fredag - Klockan är slagen och det är dags för en drink!";
+  welcomeText.textContent = "Slå dig ner, ta ett djupt andetag och gör dig redo för nu är det dags att blanda kvällens drink.\n Plocka fram glaset och låt ingredienserna mötas i perfekt harmoni!\n Oavsett om du föredrar något syrligt, fruktigt eller starkt\n så är detta stunden då du får skapa din egen magiska dryckeskombo!";
   btn.textContent = "Börja mixa";
 
   btn.addEventListener("click", () => {
@@ -29,6 +41,10 @@ function main() {
   });
 
   document.body.append(headerText, welcomeText, btn, content);
+
+  if (loadingDrink()) {
+    console.log(yourDrink);
+  }
 }
 
 const yourDrink = {
@@ -41,6 +57,7 @@ const yourDrink = {
 // VÄLJA RUM
 function openPlace(content) {
   clearContent(content);
+  
 
   const title = document.createElement("h3");
   const roomList = ["Hemma", "Bar", "Strand", "Café"];
@@ -57,6 +74,8 @@ function openPlace(content) {
 }
 
 function selectedRoom(room, content) {
+  keepingDrink();
+
   let imgChange = "";
   const dinnerSound = new Audio("sounds/dinnersound.mp3");
   const barSound = new Audio("sounds/barsound.mp3");

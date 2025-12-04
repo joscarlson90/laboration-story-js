@@ -32,10 +32,12 @@ body {
 }
 
 .welcomeText {
-  margin: 0;
+  margin: auto;
+  width: 155vh;
   text-align: center;
-  font-size: 28px;
+  font-size: 22px;
   color: var(--hoverTextColor);
+  white-space: pre-line;
 
 }
 
@@ -189,4 +191,8 @@ button:hover {
   border-style: dashed;
   background-color: var(--mainTextColor);
   margin: 15px;
+}
+
+.restartBtn:hover {
+  background-color: transparent;
 }

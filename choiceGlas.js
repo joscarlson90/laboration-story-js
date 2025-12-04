@@ -34,5 +34,6 @@ function openGlass(content) {
 
 function selectedGlass(glass, content) {
   yourDrink.glass = glass;
+  keepingDrink();
   openBase(content);
 }

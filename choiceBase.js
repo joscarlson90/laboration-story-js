@@ -19,5 +19,6 @@ function openBase(content) {
 
 function selectedBase(base, content) {
   yourDrink.base = base;
+  keepingDrink();
   openMix(content);
 }

@@ -19,7 +19,7 @@ function openMix(content) {
 
 function selectedMix(mix, content) {
   yourDrink.mix = mix;
-
+  keepingDrink();
   shakeDrink(content);
 }
 
@@ -53,11 +53,12 @@ function shakeDrink(content) {
 // Slumpmässig kommentar
 const comments = [
   "Wow! Bra val!",
-  "Hm.. Intressant kombo",
-  "Fräscht! Perfekt för vilken dag som helst",
+  "Hm.. Intressant kombo..",
+  "Fräscht! Perfekt för vilken dag som helst!",
   "Den där slinker ner fort!",
   "Jasså du, spännande val!",
   "Ajdå, får se hur den smakar..",
+  "Fy! Vad var det där?!"
 ];
 
 function showRandomComment() {
@@ -89,9 +90,10 @@ function showRandomComment() {
   document.body.appendChild(bubbleDiv);
 
   const finishDrinkImage = document.createElement("img");
-  finishDrinkImage.src = "assets/finishdrink.png";
-  finishDrinkImage.style.width = "200px";
+  finishDrinkImage.src = "assets/finishcocktaildrink.png";
+  finishDrinkImage.style.width = "250px";
   finishDrinkImage.style.marginLeft = "60%";
+  finishDrinkImage.style.bottom = "50%";
 
   document.body.appendChild(finishDrinkImage);
 
