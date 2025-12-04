@@ -7,18 +7,6 @@ function clearContent(content) {
 }
 
 function main() {
-  // const contentOld = document.querySelector(".content");
-  // if (contentOld) contentOld.remove();
-
-  // const headerOld = document.querySelector(".headerText");
-  // if (headerOld) headerOld.remove();
-
-  // const welcomeOld = document.querySelector(".welcomeText");
-  // if (welcomeOld) welcomeOld.remove();
-
-  // const btnOld = document.querySelector(".startButton");
-  // if (btnOld) btnOld.remove();
-
   const headerText = document.createElement("h1");
   const welcomeText = document.createElement("p");
   const btn = document.createElement("button");

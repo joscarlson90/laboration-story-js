@@ -98,8 +98,6 @@ function showRandomComment() {
   const randomNumber = Math.floor(Math.random() * comments.length);
   bubbleText.innerText += ` ${comments[randomNumber]}`;
   return comments[randomNumber];
-
-
 }
 
 // SLUTRESULTAT
@@ -131,16 +129,11 @@ function finalDrink(content, comment) {
   const restartBtn = document.createElement("button");
   restartBtn.textContent = "Sugen på en drink till?";
   restartBtn.classList.add("restartBtn");
-  restartBtn.addEventListener("click", main);
+  restartBtn.addEventListener("click", startNewGame);
 
   content.append(restartBtn);
 }
 
 function startNewGame() {
-  // const content = document.querySelector(".content");
-  // if (content) content.innerHTML = "";
-
-  // const comment = document.querySelector(".randomComment");
-  // if (comment) comment.remove();
-  main();
+  location.reload();
 }

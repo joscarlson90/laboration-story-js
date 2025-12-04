@@ -3,6 +3,7 @@
   --headerFont: "Galindo", sans-serif;
   --mainTextColor: white;
   --hoverTextColor: tomato;
+  --lightTomato: #ff826b;
 }
 
 body {
@@ -23,7 +24,7 @@ body {
 .headerText {
   font-family: "Asset", sans-serif;
   font-style: normal;
-  background-color: tomato;
+  background-color: var(--hoverTextColor);
   text-align: center;
   font-size: 32px;
   padding: 30px;
@@ -57,11 +58,11 @@ body {
 .startButton:hover {
   cursor: pointer;
   color: var(--mainTextColor);
-  background: #ff826b;
+  background: var(--lightTomato);
 }
 
 .content h3 {
-  color: tomato;
+  color: var(--hoverTextColor);
   text-align: center;
   margin: 15px auto;
   font-size: 28px;
@@ -81,7 +82,7 @@ body {
 .finalTextBox {
   display: block;
   margin: auto;
-  background: white;
+  background: var(--mainTextColor);
   padding: 15px;
   width: 200px;
   border-radius: 16px;
@@ -90,14 +91,14 @@ body {
 .finalItem {
   font-size: 18px;
   width: auto;
-  color: tomato;
+  color: var(--hoverTextColor);
   margin: 8px 0;
   text-align: center;
 }
 
 button {
   background: var(--mainTextColor);
-  border: 2px solid tomato;
+  border: 2px solid var(--hoverTextColor);
   padding: 10px 14px;
   border-radius: 10px;
   cursor: pointer;
@@ -106,7 +107,7 @@ button {
 }
 
 button:hover {
-  background: #ff826b;
+  background: var(--lightTomato);
   color: var(--mainTextColor);
 }
 
@@ -184,8 +185,8 @@ button:hover {
   width: auto;
   font-size: 18px;
   font-family: var(--headerFont);
-  color: tomato;
+  color: var(--hoverTextColor);
   border-style: dashed;
-  background-color: white;
+  background-color: var(--mainTextColor);
   margin: 15px;
 }
