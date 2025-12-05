@@ -24,6 +24,9 @@ function selectedMix(mix, content) {
 }
 
 function shakeDrink(content) {
+  const basePopUp = document.getElementById("baseBefore");
+  if (basePopUp) basePopUp.remove();
+
   const shakerMove = document.createElement("div");
   const shakerImage = document.createElement("img");
   const shakerSound = document.createElement("audio");
@@ -58,7 +61,7 @@ const comments = [
   "Den där slinker ner fort!",
   "Jasså du, spännande val!",
   "Ajdå, får se hur den smakar..",
-  "Fy! Vad var det där?!"
+  "Fy! Vad var det där?!",
 ];
 
 function showRandomComment() {
@@ -92,8 +95,8 @@ function showRandomComment() {
   const finishDrinkImage = document.createElement("img");
   finishDrinkImage.src = "assets/finishcocktaildrink.png";
   finishDrinkImage.style.width = "250px";
-  finishDrinkImage.style.marginLeft = "60%";
-  finishDrinkImage.style.bottom = "50%";
+  finishDrinkImage.style.marginLeft = "50%";
+  finishDrinkImage.style.bottom = "70%";
 
   document.body.appendChild(finishDrinkImage);
 
@@ -106,20 +109,20 @@ function showRandomComment() {
 function finalDrink(content, comment) {
   clearContent(content);
 
-  const title = document.createElement("h3");
+  const finalTitle = document.createElement("h3");
   const resultTextBox = document.createElement("div");
   const randomComment = document.createElement("div");
 
-  title.textContent = "Slurk.. Din drink är klar!";
+  finalTitle.textContent = "Slurk.. Din drink är klar!";
   randomComment.textContent = comment;
 
   document.querySelector(".randomComment");
 
-  title.classList.add("finalTitle");
+  finalTitle.classList.add("finalTitle");
   resultTextBox.classList.add("finalTextBox");
   randomComment.classList.add("randomComment");
 
-  content.append(title, resultTextBox, randomComment);
+  content.append(finalTitle, resultTextBox, randomComment);
 
   for (const [key, value] of Object.entries(yourDrink)) {
     const p = document.createElement("p");

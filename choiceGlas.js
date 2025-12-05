@@ -1,7 +1,7 @@
 // VÄLJA GLAS
 const glassList = [
   {name: "Highball", img: "assets/highballglass.webp"},
-  {name: "Lowball", img: "assets/lowballglass.webp.jpg"},
+  {name: "Lowball", img: "assets/lowballglass.jpg"},
   {name: "Margaritaglas", img: "assets/margaritaglas.jpg"},
   {name: "Cocktailglas", img: "assets/cocktailglas.jpg"}
 ];

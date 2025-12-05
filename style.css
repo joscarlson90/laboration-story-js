@@ -4,6 +4,7 @@
   --mainTextColor: white;
   --hoverTextColor: tomato;
   --lightTomato: #ff826b;
+  --transparentColor: rgba(255, 255, 255, 0.701);
 }
 
 body {
@@ -38,7 +39,6 @@ body {
   font-size: 22px;
   color: var(--hoverTextColor);
   white-space: pre-line;
-
 }
 
 .startButton {
@@ -127,6 +127,27 @@ button:hover {
 .glassButton:hover {
   transform: scale(1.1);
   background-color: transparent;
+}
+
+@keyframes baseBounceIn {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateX(1500px);
+  }
+  100% {
+    transform: translateX(1500px);
+  }
+ 
+}
+
+.baseBefore {
+  position: fixed;
+  width: 100px;
+  margin-left: 100px;
+  bottom: 10px;
+  animation: baseBounceIn 5s infinite ease-out;
 }
 
 .shakerMove {

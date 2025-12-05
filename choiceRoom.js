@@ -11,9 +11,9 @@ function keepingDrink() {
 }
 
 function loadingDrink() {
-  const saved = localStorage.getItem("yourDrink");
-  if (saved) {
-    Object.assign(yourDrink, JSON.parse(saved));
+  const drinkItem = localStorage.getItem("yourDrink");
+  if (drinkItem) {
+    Object.assign(yourDrink, JSON.parse(drinkItem));
     return true;
   }
   return false;
@@ -58,7 +58,6 @@ const yourDrink = {
 function openPlace(content) {
   clearContent(content);
   
-
   const title = document.createElement("h3");
   const roomList = ["Hemma", "Bar", "Strand", "Café"];
   title.textContent = "Vart vill du dricka din drink?";
